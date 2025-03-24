@@ -1,0 +1,15 @@
+{
+  "favorite": "Նախընտրելի",
+  "support": "Աջակցում",
+  "password": "Password",
+  "email": "Email",
+  "login": "Login",
+  "sign_up": "Sign-up",
+  "forgot_password": "Forgot password?",
+  "user_name": "Username",
+  "blank": "Դատարկ դաշտը թույլատրելի չէ։",
+  "no_user": "Անվան օգտագործողը և գաղտնաբառը չեն համապատասխանում։",
+  "log_out": "Ելք",
+  "are_you_sign_out": "Are you sure you want to log out?",
+  "cancel": "Cancel"
+}

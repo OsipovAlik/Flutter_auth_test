@@ -1,0 +1,15 @@
+{
+  "favorite": "Избранные",
+  "support": "Служба поддержки",
+  "password": "Password",
+  "email": "Email",
+  "login": "Login",
+  "sign_up": "Sign-up",
+  "forgot_password": "Forgot password?",
+  "user_name": "Username",
+  "blank": "Пустое поле не допускается.",
+  "no_user": "имя пользователя пароль не соответствует",
+  "log_out": "Выход",
+  "are_you_sign_out": "Are you sure you want to log out?",
+  "cancel": "Cancel"
+}

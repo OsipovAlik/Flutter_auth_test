@@ -1,0 +1,15 @@
+{
+    "favorite": "Favorite",
+    "support": "Support",
+    "password": "Password",
+    "email": "Email",
+    "login": "Login",
+    "sign_up": "Sign-up",
+    "forgot_password": "Forgot password?",
+    "user_name": "Username",
+    "blank": "Blank field is not allowed ",
+    "no_user": "The username and password do not match.",
+    "log_out": "Log out",
+    "are_you_sign_out": "Are you sure you want to log out?",
+    "cancel": "Cancel"
+}
