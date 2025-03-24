@@ -35,7 +35,7 @@ class SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return AnimatedSplashScreen.withScreenFunction(
-      backgroundColor: CustomColors.global,
+      backgroundColor: CustomColors.lightBlue,
       splashTransition: SplashTransition.fadeTransition,
       splashIconSize: double.infinity,
       duration: 2500,
