@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'task_navigaton_store.dart';
+part of 'navigaton_store.dart';
 
 // **************************************************************************
 // StoreGenerator

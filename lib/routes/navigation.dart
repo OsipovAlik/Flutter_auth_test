@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_task/routes/model/nav_model.dart';
-import 'package:flutter_task/store/task_navigation_store/task_navigaton_store.dart';
+import 'package:flutter_task/store/navigation_store/navigaton_store.dart';
 import 'package:flutter_task/theme/box_decoration.dart';
 import 'package:flutter_task/theme/custom_colors.dart';
 import 'package:flutter_task/views/home/home.dart';

@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_task/generated/l10n.dart';
-import 'package:flutter_task/routes/task_navigation.dart';
+import 'package:flutter_task/routes/navigation.dart';
 import 'package:flutter_task/services/model/user_model.dart';
 import 'package:flutter_task/services/services.dart';
 import 'package:flutter_task/widgets/snackbar_util/snackbar_util.dart';
@@ -45,79 +45,45 @@ abstract class _AuthStore with Store {
   void setCurrentPage(int index) {
     currentPage = index;
     emailVisible = index != 0;
-    clearTextFieldValue();
+    clearvalues();
   }
 
   void loginUser(BuildContext context) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     final data = prefs.getString("users") ?? '[]';
-    if (userNameController.text.isNotEmpty &&
-        passwordController.text.isNotEmpty) {
+    if (userNameController.text.isNotEmpty && passwordController.text.isNotEmpty) {
       if (data.isNotEmpty) {
-        List<UserModel> usersList =
-            (jsonDecode(data) as List)
-                .map((userJson) => UserModel.fromJson(userJson))
-                .toList();
+        List<UserModel> usersList = (jsonDecode(data) as List).map((userJson) => UserModel.fromJson(userJson)).toList();
         for (var i = 0; i < usersList.length; i++) {
-          if (userNameController.text == usersList[i].userName &&
-              passwordController.text == usersList[i].password) {
+          if (userNameController.text == usersList[i].userName && passwordController.text == usersList[i].password) {
             Services.setUserLogin("token");
-            Navigator.of(context).pushAndRemoveUntil(
-              MaterialPageRoute(builder: (context) => const Navigation()),
-              (Route<dynamic> route) => false,
-            );
+            Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => const Navigation()), (Route<dynamic> route) => false);
           } else {
-            SnackbarUtil.showSnackbar(
-              context,
-              S.current.no_user,
-              duration: Duration(seconds: 1),
-            );
+            SnackbarUtil.showSnackbar(context, S.current.no_user, duration: Duration(seconds: 1));
           }
         }
       } else {
-        SnackbarUtil.showSnackbar(
-          context,
-          S.current.no_user,
-          duration: Duration(seconds: 1),
-        );
+        SnackbarUtil.showSnackbar(context, S.current.no_user, duration: Duration(seconds: 1));
       }
     } else {
-      SnackbarUtil.showSnackbar(
-        context,
-        S.current.blank,
-        duration: Duration(seconds: 1),
-      );
+      SnackbarUtil.showSnackbar(context, S.current.blank, duration: Duration(seconds: 1));
     }
   }
 
   void registerUser(BuildContext context, int idx) {
-    if (emailController.text.isNotEmpty &&
-        userNameController.text.isNotEmpty &&
-        passwordController.text.isNotEmpty) {
-      final user = UserModel(
-        email: emailController.text,
-        password: passwordController.text,
-        userName: userNameController.text,
-      );
+    if (emailController.text.isNotEmpty && userNameController.text.isNotEmpty && passwordController.text.isNotEmpty) {
+      final user = UserModel(email: emailController.text, password: passwordController.text, userName: userNameController.text);
       usersList.add(user);
       Services.setUsers(usersList);
       currentPage = 0;
-      pageController.animateToPage(
-        0,
-        duration: Duration(milliseconds: 500),
-        curve: Curves.ease,
-      );
-      clearTextFieldValue();
+      pageController.animateToPage(0, duration: Duration(milliseconds: 500), curve: Curves.ease);
+      clearvalues();
     } else {
-      SnackbarUtil.showSnackbar(
-        context,
-        S.current.blank,
-        duration: Duration(seconds: 1),
-      );
+      SnackbarUtil.showSnackbar(context, S.current.blank, duration: Duration(seconds: 1));
     }
   }
 
-  void clearTextFieldValue() {
+  void clearvalues() {
     emailController.clear();
     passwordController.clear();
     userNameController.clear();
@@ -142,11 +108,7 @@ abstract class _AuthStore with Store {
       currentLogin = false;
     }
 
-    pageController.animateToPage(
-      index,
-      duration: Duration(milliseconds: 300),
-      curve: Curves.ease,
-    );
+    pageController.animateToPage(index, duration: Duration(milliseconds: 300), curve: Curves.ease);
   }
 
   void disposeControllers() {

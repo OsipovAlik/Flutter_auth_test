@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'custom_colors.dart';
 
-
 abstract class CustomButtons {
-  static ButtonStyle regBtn = ButtonStyle(
-    splashFactory: NoSplash.splashFactory,
-    padding: WidgetStateProperty.all(EdgeInsets.zero),
-  );
+  static ButtonStyle regBtn = ButtonStyle(splashFactory: NoSplash.splashFactory, padding: WidgetStateProperty.all(EdgeInsets.zero));
   static ButtonStyle greenBtn = ElevatedButton.styleFrom(
     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
     backgroundColor: CustomColors.global,

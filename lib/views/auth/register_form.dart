@@ -38,9 +38,7 @@ class RegisterForm extends StatelessWidget {
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return "";
-              } else if (!RegExp(
-                r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$",
-              ).hasMatch(value)) {
+              } else if (!RegExp(r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$").hasMatch(value)) {
                 return "";
               }
               return null;
@@ -51,23 +49,14 @@ class RegisterForm extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12.0), // Rounded corners
                 borderSide: BorderSide.none, // No visible border
               ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(24.0),
-                borderSide: BorderSide(color: Colors.red, width: 1.0),
-              ),
+              errorBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(24.0), borderSide: BorderSide(color: Colors.red, width: 1.0)),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(24.0),
-                borderSide: BorderSide(
-                  color: CustomColors.blueDark,
-                  width: 1.0,
-                ),
+                borderSide: BorderSide(color: CustomColors.blueDark, width: 1.0),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(24.0),
-                borderSide: BorderSide(
-                  color: CustomColors.blueDark,
-                  width: 1.0,
-                ),
+                borderSide: BorderSide(color: CustomColors.blueDark, width: 1.0),
               ),
               hintText: S.current.email,
               contentPadding: const EdgeInsets.only(left: 20),
@@ -84,27 +73,15 @@ class RegisterForm extends StatelessWidget {
             autofillHints: [AutofillHints.username],
             decoration: InputDecoration(
               fillColor: CustomColors.blueDark.withOpacity(0.6),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(24.0),
-                borderSide: BorderSide.none,
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(24.0),
-                borderSide: BorderSide(color: Colors.red, width: 1.0),
-              ),
+              border: OutlineInputBorder(borderRadius: BorderRadius.circular(24.0), borderSide: BorderSide.none),
+              errorBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(24.0), borderSide: BorderSide(color: Colors.red, width: 1.0)),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(24.0),
-                borderSide: BorderSide(
-                  color: CustomColors.blueDark,
-                  width: 1.0,
-                ),
+                borderSide: BorderSide(color: CustomColors.blueDark, width: 1.0),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(24.0),
-                borderSide: BorderSide(
-                  color: CustomColors.blueDark,
-                  width: 1.0,
-                ),
+                borderSide: BorderSide(color: CustomColors.blueDark, width: 1.0),
               ),
               hintText: S.current.user_name,
               contentPadding: const EdgeInsets.only(left: 20),
@@ -122,33 +99,19 @@ class RegisterForm extends StatelessWidget {
             decoration: InputDecoration(
               suffixIcon: IconButton(
                 color: Colors.grey,
-                icon: Icon(
-                  obscureText ? Icons.visibility_off : Icons.visibility,
-                ),
+                icon: Icon(obscureText ? Icons.visibility_off : Icons.visibility),
                 onPressed: () => toggle(),
               ),
               fillColor: CustomColors.blueDark.withOpacity(0.6),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(24.0),
-                borderSide: BorderSide.none,
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(24.0),
-                borderSide: BorderSide(color: Colors.red, width: 1.0),
-              ),
+              border: OutlineInputBorder(borderRadius: BorderRadius.circular(24.0), borderSide: BorderSide.none),
+              errorBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(24.0), borderSide: BorderSide(color: Colors.red, width: 1.0)),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(24.0),
-                borderSide: BorderSide(
-                  color: CustomColors.blueDark,
-                  width: 1.0,
-                ),
+                borderSide: BorderSide(color: CustomColors.blueDark, width: 1.0),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(24.0),
-                borderSide: BorderSide(
-                  color: CustomColors.blueDark,
-                  width: 1.0,
-                ),
+                borderSide: BorderSide(color: CustomColors.blueDark, width: 1.0),
               ),
               hintText: S.current.password,
               contentPadding: const EdgeInsets.only(left: 20),

@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:flutter_task/services/model/user_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-
 class Services {
   static Services shared = Services();
 
@@ -16,5 +15,4 @@ class Services {
     String jsonString = jsonEncode(list.map((e) => e.toJson()).toList());
     return prefs.setString("users", jsonString);
   }
-
 }

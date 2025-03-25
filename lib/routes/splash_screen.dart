@@ -2,7 +2,7 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_task/constants/constants.dart';
 import 'package:flutter_task/global/global.dart';
-import 'package:flutter_task/routes/task_navigation.dart';
+import 'package:flutter_task/routes/navigation.dart';
 import 'package:flutter_task/theme/custom_colors.dart';
 import 'package:flutter_task/views/auth/auth.dart';
 

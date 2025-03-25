@@ -37,11 +37,7 @@ class LoginState extends State<Login> {
               Stack(
                 children: [
                   SizedBox(child: Image.asset('lib/assets/img/Subtract.png')),
-                  Positioned(
-                    top: 80,
-                    left: 20,
-                    child: SvgPicture.asset(logoSvg),
-                  ),
+                  Positioned(top: 80, left: 20, child: SvgPicture.asset(logoSvg)),
                 ],
               ),
               SizedBox(height: 80),
@@ -55,17 +51,14 @@ class LoginState extends State<Login> {
                           clipBehavior: Clip.none,
                           physics: PageScrollPhysics(),
                           controller: _authStore.pageController,
-                          onPageChanged:
-                              (index) => _authStore.setCurrentPage(index),
+                          onPageChanged: (index) => _authStore.setCurrentPage(index),
                           children: [
                             Padding(
                               padding: EdgeInsets.symmetric(horizontal: 10),
                               child: LoginForm(
                                 emailVisibly: false,
-                                userNameController:
-                                    _authStore.userNameController,
-                                passwordController:
-                                    _authStore.passwordController,
+                                userNameController: _authStore.userNameController,
+                                passwordController: _authStore.passwordController,
                                 formKey: PageStorageKey('loginForm1'),
                                 obscureText: _authStore.obscureText,
                                 toggle: _authStore.toggleObscureText,
@@ -76,10 +69,8 @@ class LoginState extends State<Login> {
                               child: LoginForm(
                                 emailVisibly: true,
                                 emailNameController: _authStore.emailController,
-                                userNameController:
-                                    _authStore.userNameController,
-                                passwordController:
-                                    _authStore.passwordController,
+                                userNameController: _authStore.userNameController,
+                                passwordController: _authStore.passwordController,
                                 formKey: PageStorageKey('loginForm2'),
                                 obscureText: _authStore.obscureText,
                                 toggle: _authStore.toggleObscureText,
@@ -93,13 +84,7 @@ class LoginState extends State<Login> {
               Container(
                 width: MediaQuery.sizeOf(context).width,
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
-                child: Column(
-                  spacing: 62,
-                  children: [
-                    Observer(builder: (_) => _tabBar()),
-                    Text(S.current.forgot_password, style: ThemeText.b16),
-                  ],
-                ),
+                child: Column(spacing: 62, children: [Observer(builder: (_) => _tabBar()), Text(S.current.forgot_password, style: ThemeText.b16)]),
               ),
             ],
           ),
@@ -113,12 +98,7 @@ class LoginState extends State<Login> {
       height: 45,
       width: MediaQuery.sizeOf(context).width,
       decoration: MyBoxDecoration.tabBar,
-      child: Row(
-        children: [
-          _tabButton(S.current.login, 0),
-          _tabButton(S.current.sign_up, 1),
-        ],
-      ),
+      child: Row(children: [_tabButton(S.current.login, 0), _tabButton(S.current.sign_up, 1)]),
     );
   }
 
@@ -133,17 +113,10 @@ class LoginState extends State<Login> {
                 height: 45,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                  color:
-                      _authStore.currentPage == index
-                          ? CustomColors.blue
-                          : Colors.transparent,
+                  color: _authStore.currentPage == index ? CustomColors.blue : Colors.transparent,
                   borderRadius: BorderRadius.circular(22),
                 ),
-                child: Text(
-                  title,
-                  textAlign: TextAlign.center,
-                  style: ThemeText.w14b,
-                ),
+                child: Text(title, textAlign: TextAlign.center, style: ThemeText.w14b),
               ),
         ),
       ),

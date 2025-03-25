@@ -19,10 +19,7 @@ class _ProfileState extends State<Profile> {
   void _logOut() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove('token');
-    Navigator.of(
-      context,
-      rootNavigator: true,
-    ).pushReplacement(MaterialPageRoute(builder: (context) => const Login()));
+    Navigator.of(context, rootNavigator: true).pushReplacement(MaterialPageRoute(builder: (context) => const Login()));
   }
 
   @override
@@ -47,18 +44,11 @@ class _ProfileState extends State<Profile> {
               ),
               const Text('Profile', style: ThemeText.b16b),
               const SizedBox(height: 10),
-              SizedBox(
-                width: 150,
-                height: 150,
-                child: const Image(
-                  image: AssetImage('lib/assets/img/profile.jpeg'),
-                ),
-              ),
+              SizedBox(width: 150, height: 150, child: const Image(image: AssetImage('lib/assets/img/profile.jpeg'))),
               const SizedBox(height: 5),
               const Text("Name Surname", style: ThemeText.b16b),
               const Text("example@gmail.com", style: ThemeText.b16),
               const SizedBox(height: 10),
-              // Add other profile details or widgets here
             ],
           ),
         ),

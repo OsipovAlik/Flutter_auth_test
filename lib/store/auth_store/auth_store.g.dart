@@ -2,15 +2,8 @@
 
 part of 'auth_store.dart';
 
-// **************************************************************************
-// StoreGenerator
-// **************************************************************************
-
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
-
 mixin _$AuthStore on _AuthStore, Store {
-  late final _$currentPageAtom =
-      Atom(name: '_AuthStore.currentPage', context: context);
+  late final _$currentPageAtom = Atom(name: '_AuthStore.currentPage', context: context);
 
   @override
   int get currentPage {
@@ -25,8 +18,7 @@ mixin _$AuthStore on _AuthStore, Store {
     });
   }
 
-  late final _$emailVisibleAtom =
-      Atom(name: '_AuthStore.emailVisible', context: context);
+  late final _$emailVisibleAtom = Atom(name: '_AuthStore.emailVisible', context: context);
 
   @override
   bool get emailVisible {
@@ -41,8 +33,7 @@ mixin _$AuthStore on _AuthStore, Store {
     });
   }
 
-  late final _$obscureTextAtom =
-      Atom(name: '_AuthStore.obscureText', context: context);
+  late final _$obscureTextAtom = Atom(name: '_AuthStore.obscureText', context: context);
 
   @override
   bool get obscureText {
@@ -57,8 +48,7 @@ mixin _$AuthStore on _AuthStore, Store {
     });
   }
 
-  late final _$currentLoginAtom =
-      Atom(name: '_AuthStore.currentLogin', context: context);
+  late final _$currentLoginAtom = Atom(name: '_AuthStore.currentLogin', context: context);
 
   @override
   bool get currentLogin {
@@ -73,8 +63,7 @@ mixin _$AuthStore on _AuthStore, Store {
     });
   }
 
-  late final _$currentRegisterAtom =
-      Atom(name: '_AuthStore.currentRegister', context: context);
+  late final _$currentRegisterAtom = Atom(name: '_AuthStore.currentRegister', context: context);
 
   @override
   bool get currentRegister {
@@ -89,8 +78,7 @@ mixin _$AuthStore on _AuthStore, Store {
     });
   }
 
-  late final _$usersListAtom =
-      Atom(name: '_AuthStore.usersList', context: context);
+  late final _$usersListAtom = Atom(name: '_AuthStore.usersList', context: context);
 
   @override
   List<UserModel> get usersList {
@@ -105,13 +93,11 @@ mixin _$AuthStore on _AuthStore, Store {
     });
   }
 
-  late final _$_AuthStoreActionController =
-      ActionController(name: '_AuthStore', context: context);
+  late final _$_AuthStoreActionController = ActionController(name: '_AuthStore', context: context);
 
   @override
   void toggleObscureText() {
-    final _$actionInfo = _$_AuthStoreActionController.startAction(
-        name: '_AuthStore.toggleObscureText');
+    final _$actionInfo = _$_AuthStoreActionController.startAction(name: '_AuthStore.toggleObscureText');
     try {
       return super.toggleObscureText();
     } finally {
@@ -121,8 +107,7 @@ mixin _$AuthStore on _AuthStore, Store {
 
   @override
   void setCurrentPage(int index) {
-    final _$actionInfo = _$_AuthStoreActionController.startAction(
-        name: '_AuthStore.setCurrentPage');
+    final _$actionInfo = _$_AuthStoreActionController.startAction(name: '_AuthStore.setCurrentPage');
     try {
       return super.setCurrentPage(index);
     } finally {
@@ -132,8 +117,7 @@ mixin _$AuthStore on _AuthStore, Store {
 
   @override
   void changePage(BuildContext context, int index) {
-    final _$actionInfo =
-        _$_AuthStoreActionController.startAction(name: '_AuthStore.changePage');
+    final _$actionInfo = _$_AuthStoreActionController.startAction(name: '_AuthStore.changePage');
     try {
       return super.changePage(context, index);
     } finally {
